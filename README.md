@@ -36,11 +36,11 @@ In the "AFTER" metrics phase, Network Security Groups were strengthened by restr
 
 ## Attack Maps Before Hardening / Security Controls
 ![NSG Allowed Inbound Malicious Flows](![image](https://github.com/whitehillnate/Azure-Soc/assets/148999138/54df7057-f104-42e9-8ec5-af68dfe365ad)
-)<br>
+
 ![Linux Syslog Auth Failures](![image](https://github.com/whitehillnate/Azure-Soc/assets/148999138/7740c48b-b651-4998-a1e4-32dc7b5d781d)
 
 ![Windows RDP/SMB Auth Failures](![image](https://github.com/whitehillnate/Azure-Soc/assets/148999138/f59739dd-d4d6-4671-8fcc-206a9efae5a1)
-)<br>
+
 
 ## Metrics Before Hardening / Security Controls
 
