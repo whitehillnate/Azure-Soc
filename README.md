@@ -1,9 +1,9 @@
-# Building a SOC + Honeynet in Azure (Live Traffic)
+# Building a SOC + Honeynet in Azure ( with Live Traffic)
 ![Cloud Honeynet / SOC](https://i.imgur.com/ZWxe03e.jpg)
 
 ## Introduction
 
-In this project, I build a mini honeynet in Azure and ingest log sources from various resources into a Log Analytics workspace, which is then used by Microsoft Sentinel to build attack maps, trigger alerts, and create incidents. I measured some security metrics in the insecure environment for 24 hours, apply some security controls to harden the environment, measure metrics for another 24 hours, then show the results below. The metrics we will show are:
+In this project, I have implemented a miniature honeynet within the Azure cloud environment. The honeynet collects logs from diverse sources and aggregates them into a centralized Log Analytics workspace. Microsoft Sentinel utilizes this workspace to construct attack maps, initiate alerts, and generate incident reports. To assess the security posture of the vulnerable environment, I measured specific security metrics over a 24-hour period. Subsequently, I implemented various security controls to fortify the environment, and once again measured the relevant metrics over another 24-hour period. The results are presented below, highlighting the impact of the security enhancements on the measured metrics:
 
 - SecurityEvent (Windows Event Logs)
 - Syslog (Linux Event Logs)
@@ -25,11 +25,12 @@ The architecture of the mini honeynet in Azure consists of the following compone
 - Log Analytics Workspace
 - Azure Key Vault
 - Azure Storage Account
-- Microsoft Sentinel
+- Microsoft Sentinel (Note: my time and experience with Azure was excellent, KQL's syntax is a bit different from SQL, but overall went really smooth)
 
-For the "BEFORE" metrics, all resources were originally deployed, exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls wide open, and all other resources are deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
 
-For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
+Prior to implementing changes, all resources were deployed with direct exposure to the internet. The Virtual Machines had wide-open Network Security Groups and built-in firewalls, and other resources were configured with public endpoints accessible to the internet—rendering the use of Private Endpoints unnecessary.
+
+In the "AFTER" metrics phase, Network Security Groups were strengthened by restricting ALL traffic except for my admin workstation. Additionally, all other resources were safeguarded by their respective built-in firewalls, coupled with the implementation of Private Endpoints.
 
 ## Attack Maps Before Hardening / Security Controls
 ![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
