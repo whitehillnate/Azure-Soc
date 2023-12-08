@@ -12,10 +12,12 @@ In this hands on project, I have implemented a miniature honeynet within the Azu
 - AzureNetworkAnalytics_CL (Malicious Flows allowed into our honeynet)
 
 ## Architecture Before Hardening / Security Controls
-![Architecture Diagram](https://i.imgur.com/aBDwnKb.jpg)
+The Architecture of my enviorment was wide open to any malicious actors trying to hack in. I turned off all of the firewalls within the Linux-Vm and Windows-VM. I also configured the Azure NSG to allow any inbound and outbound traffic, which resulted in many attempts. I also constructed a MySQl database within the Windows VM, but not malicious actor found it. 
+
 
 ## Architecture After Hardening / Security Controls
-![Architecture Diagram](https://i.imgur.com/YQNa9Pp.jpg)
+To harden the enviornment, I complied with the NIST 800-53 regulatory standards for securing an enviornement, my environment score went from a 38% to 80% after following their guidelines. I turned on the firewalls within the Virtual Machines, and within Azure I configured it so only my IpAddress would be able to connect for the inbound and outbound traffic. 
+
 
 The architecture of the mini honeynet in Azure consists of the following components:
 
@@ -54,9 +56,7 @@ Stop Time 12/7/2023 10:50:48
 | SecurityIncident         | 209
 | AzureNetworkAnalytics_CL | 1487
 
-## Attack Maps Before Hardening / Security Controls
 
-```All map queries actually returned no results due to no instances of malicious activity for the 24 hour period after hardening.```
 
 ## Metrics After Hardening / Security Controls
 
@@ -72,12 +72,16 @@ Stop Time 12/8/2023 9:36:19
 | SecurityIncident         | 0
 | AzureNetworkAnalytics_CL | 3
 
+![image](https://github.com/whitehillnate/Azure-Soc/assets/148999138/2e90fb82-9587-4a56-9deb-8c0916a7ff48)
+![image](https://github.com/whitehillnate/Azure-Soc/assets/148999138/a5105e92-b2eb-4fd0-a446-39458b24c5cd)
+![image](https://github.com/whitehillnate/Azure-Soc/assets/148999138/5bf1df39-cdbe-43cd-a383-5fe740179b17)
+
 
 
 
 
 ## Conclusion
 
-In this project, a mini honeynet was constructed in Microsoft Azure and log sources were integrated into a Log Analytics workspace. Microsoft Sentinel was employed to trigger alerts and create incidents based on the ingested logs. Additionally, metrics were measured in the insecure environment before security controls were applied, and then again after implementing security measures. It is noteworthy that the number of security events and incidents were drastically reduced after the security controls were applied, demonstrating their effectiveness.
+In this project, a miniature honeynet was established in Microsoft Azure, and log sources were integrated into a Log Analytics workspace. Microsoft Sentinel was utilized to initiate alerts and generate incidents based on the collected logs. Subsequently, metrics were assessed in the insecure environment both before and after the implementation of security controls. Notably, the application of security measures led to a significant reduction in the number of security events and incidents, underscoring their efficacy.
 
-It is worth noting that if the resources within the network were heavily utilized by regular users, it is likely that more security events and alerts may have been generated within the 24-hour period following the implementation of the security controls.
+It's important to recognize that if the network resources were extensively used by regular users, there might have been a potential for increased security events and alerts within the 24-hour period following the implementation of security controls.
