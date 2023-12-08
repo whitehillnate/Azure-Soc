@@ -33,7 +33,8 @@ Prior to implementing changes, all resources were deployed with direct exposure 
 In the "AFTER" metrics phase, Network Security Groups were strengthened by restricting ALL traffic except for my admin workstation. Additionally, all other resources were safeguarded by their respective built-in firewalls, coupled with the implementation of Private Endpoints.
 
 ## Attack Maps Before Hardening / Security Controls
-![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
+![NSG Allowed Inbound Malicious Flows](![image](https://github.com/whitehillnate/Azure-Soc/assets/148999138/54df7057-f104-42e9-8ec5-af68dfe365ad)
+)<br>
 ![Linux Syslog Auth Failures](![image](https://github.com/whitehillnate/Azure-Soc/assets/148999138/7740c48b-b651-4998-a1e4-32dc7b5d781d)
 
 ![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
