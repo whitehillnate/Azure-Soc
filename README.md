@@ -37,7 +37,8 @@ In the "AFTER" metrics phase, Network Security Groups were strengthened by restr
 )<br>
 ![Linux Syslog Auth Failures](![image](https://github.com/whitehillnate/Azure-Soc/assets/148999138/7740c48b-b651-4998-a1e4-32dc7b5d781d)
 
-![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
+![Windows RDP/SMB Auth Failures](![image](https://github.com/whitehillnate/Azure-Soc/assets/148999138/f59739dd-d4d6-4671-8fcc-206a9efae5a1)
+)<br>
 
 ## Metrics Before Hardening / Security Controls
 
